@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #image {
+            width: 250px;
+            margin-top: 0px;
+        }
+        #about {
+            color: yellow;
+            margin-top:120px;
+        }
+        #about1 {
+            color: white;
+            margin-top:120px;
+
+        }
+
+        .about2 {
+            padding-bottom: 20px;
+        }
+
+        .bg {
+            background-color: black;
+            color: white;
+        }
+        .social_media{
+            transition:0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row about2">
+            <div class="col-6">
+                <img src="/media/{{newsDetails.news_image}}" class="img-fluid"/>
+            </div> 
+            <div class="col-md-6" style="background-color:black ;">
+                <h1 id="about1">{{newsDetails.news_title}}</h1>
+                <br>
+                <br>
+                <p style="text-align:justify; color: white; margin-bottom:70px;">
+                    {{newsDetails.news_desc | safe}}
+                </p>
+            </div>
+        </div>  
+       
+    </div>
+    {% comment %} footer {% endcomment %}
+    {% include "footer.html" %}
+    
+    {% include "header.html" %}
+</body>
+</html>

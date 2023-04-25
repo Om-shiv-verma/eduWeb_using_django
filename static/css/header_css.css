@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* .colour {
+    color: #fff !important;
+} */
+
+#image {
+    width: 250px;
+    margin-top: 0px;
+}
+
+.header_info {
+    position: fixed;
+    top: 0px;
+    background-color: #200769;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    font-weight: bolder;
+    font-size: 19px;
+    width: 100%;
+}
+
+.active a{
+    color: red;
+}

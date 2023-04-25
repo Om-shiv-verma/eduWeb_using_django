@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #image {
+            width: 250px;
+            margin-top: 0px;
+        }
+        #about {
+            color: yellow;
+            margin-top:120px;
+        }
+        #about1 {
+            color: white;
+            margin-top:120px;
+
+        }
+
+        .about2 {
+            padding-bottom: 20px;
+        }
+
+        .bg {
+            background-color: black;
+            color: white;
+        }
+        .social_media{
+            transition:0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- headers -->
+
+        <!-- first row -->
+        <div class="row about2">
+            <div class="col-md-6" style="background-color:black; text-align: right;">
+                <h1 id="about">ABOUT {{output}}</h1>
+            </div>
+            <div class="col-md-6" style="background-color:black ;">
+                <h1 id="about1">WHO WE ARE</h1>
+                <br>
+                <br>
+                <p style="text-align:justify; color: white; margin-bottom:70px;">
+                    We are an Online Japanese Language School. RRJ Academy offers <br>
+                    Japanese Language courses taught inEnglish or Hindi.We provide <br>
+                    programs to help you complete your post-graduate goals. We are an <br>
+                    organisation of qualified Indian, Japanese, American, Russian, and <br>
+                    French instructors.
+                </p>
+            </div>
+        </div>
+        <!-- second row -->
+        <div class="row ">
+            <div class="col-md-12 text-center">
+                <h1 style="margin-top:35px;">OUR MISSION</h1>
+                <hr width="70px" color="green" style="height:4px;">
+            </div>
+        </div>
+        <!-- third row -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="margin-top:30px;margin-bottom:70px;">
+                    Our mission is to be more than an online prep course or your average Japanese language school. Our
+                    goal is to establish a <br>
+                    multicultural community focused on growing and strengthening our organisation by re-investing and
+                    giving back to it. We <br>
+                    do not prioritise profit margins.
+                </p>
+            </div>
+        </div>
+        <!-- forth row -->
+        <div class="row bg">
+            <div class="col-md-12 text-center">
+                <h1 style="margin-top:60px;">WHAT MAKES US DIFFERENT?</h1>
+                <hr width="70px" color="green" style="height:4px;">
+            </div>
+        </div>
+        <!-- 5th row -->
+        <div class="row bg">
+            <div class="col-md-12 text-center">
+                <p style="margin-top:5px; margin-bottom:70px;">
+                    Beyond Japanese Language and Exam Preparation -we offer online classes that help students enter
+                    various industries. These classes may cover <br>
+                    music, Manga, Anime, Youtube, Film, and Fitness. RRJ Academy collaborates with agencies and
+                    instructors on a global scale. We continue to offer <br>
+                    advanced support for students that live in India, Pakistan, Bangladesh, and Nepal.
+                </p>
+            </div>
+        </div>
+        <!-- 6th row -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 style="margin-top:50px;">ABOUT THE FOUNDER</h1>
+                <hr width="70px" color="green" style="height:4px;">
+            </div>
+        </div>
+        <!-- 7th row -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="margin-top:5px; margin-bottom:70px;">
+                    Beyond English Language and Exam Preparation -we offer online classes that help students enter
+                    various industries. These classes may cover <br>
+                    music, Manga, Anime, Youtube, Film, and Fitness. RRJ Academy collaborates with agencies and
+                    instructors on a global scale. We continue to offer <br>
+                    advanced support for students that live in India, Pakistan, Bangladesh, and Nepal.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% comment %} footer {% endcomment %}
+    {% include "footer.html" %}
+    
+    {% include "header.html" %}
+</body>
+</html>

@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our team</title>
+	{% comment %} <link rel="preconnect" href="https://fonts.googleapis.com"> {% endcomment %}
+	{% comment %} <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> {% endcomment %}
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> {% endcomment %}
+
+	{% comment %} <script src="https://kit.fontawesome.com/80e022771c.js" crossorigin="anonymous"></script> {% endcomment %}
+    <style>
+        *{
+            margin: 0px;
+			font-family: 'Ubuntu', sans-serif;
+        }
+        h1{
+            font-size: 35px;
+            color:#D9299B;
+        }
+        .content{
+            font-size: 20px;
+        }
+        img{
+            border-radius: 7px;
+			padding-bottom:15px;
+        }
+		.team{
+			position:relative;
+			top:80px;
+		}
+		nav{
+	            position:fixed;
+	            top:0;
+	            left:0;
+	            width:100%;
+	            height:93px;
+	            box-sizing:border-box;
+	            background:white;
+	            boder-bottom:1px solid#fff;
+	            opacity:0.93;
+	            border-bottom:1px solid #f7e0df;
+            }
+            .wraperr1{
+	            width:100%;
+	            display:flex;
+	            background-color:#fff;
+	            padding:18px 15px 0px 40px;
+	            border-radius:2px solid #dbd7cbee;
+            }
+            .content2{
+                flex:60%;
+            } 
+            .content-link{
+                display:flex;
+                background:#fff;
+                flex:40%;
+                padding:12px 0px 25px 110px;
+            }
+            a{
+            color:#000000;
+            }
+            .space{
+            padding-right:20px;
+            color:#000000;
+            }
+                .space{
+                width:100px;
+	            height:36px;
+   	            font-size:17px;
+	            padding-top:5px;
+  
+            }
+            a:hover{
+                text-decoration:none;
+             background-color:#D9299B;
+                border-radius:12px;
+                padding:9px 9px 8px 12px;
+                color:white;
+            }
+        @media(max-width:900px){
+            img{
+                width:100%;
+                height:auto;
+                /* margin-left: 45px;   */
+            }
+            .team{
+                justify-content: center;
+                align-items: center;
+            }
+			nav{
+			height:80px;
+			
+			}
+			.content{
+			font-size:20px;
+			}
+			.wraperr1{
+	            flex-direction:row;
+	            padding:7px 0px 15px 15px;
+	            border-bottom:1px solid #f7e0df;
+	            }
+	            .space-1{
+	            display:none;
+	            }
+	            .space{
+	            width:0px;
+	            padding-right:0px;
+	            padding-left:0px;
+	            margin-left:30px;
+	            }
+	            .content-link{
+	            padding:20px 0px 0px 23px;
+	            }
+	            .content2{
+	            padding-left:0px;
+	            padding-top:5px;
+	            width:150px;
+	            height:59px;
+	            }
+	            .content2 img{
+		            width:160px;
+		            padding-bottom:10px;
+		            margin-right:10px;
+		
+	            }
+    </style>
+</head>
+<body>
+    <div class="container team">
+        <div class="row">
+            <h1>
+                <center><strong>Our team</strong></center>
+            </h1>
+        </div>
+        <div class="row content">
+            <div class="col-md-12">
+            <p><center>We proudly present our hardworking & best team.</center></p>
+        </div>
+        </div>
+        <h1><center>Mentor's overview</center></h1>
+		<br>
+        <div class="row ">  
+            <div class="col-md-3">
+                <div class="box">
+                    <h4>Web devlopment</h4>
+                    <form method="get">
+                        <input type="text" name="servicename">
+                        <input type="submit" value='Search'>
+                    <form>
+                </div>
+            </div>
+            <div class="col-md-9 content" text-align="justify">
+               We are very thankful to our mentor Mr. Bhanu Pratap Rai Sir who has played a good role in encouraging and supporting us by offering suggestions and acknowledging us about different new things  which helped us to develop our skills and work in effective way.
+       He is also having good communication skills and helped us in interacting with others regarding our work.
+        So we are very grateful for the mentorship you have given us over the past months and we look forward that you're always going to be there with us in the future. </div>
+        </div>
+       
+        <hr>
+        <h1><center>Our vision</center></h1>
+		<br>
+        <div class="row reverse">  
+            <div class="col-md-6 content reverse_text" text-align="justify">
+                 {% comment %} Our vision is to provide the user with a platform where
+                  they can easily do their works and can get useful information from it 
+                 as we are developing a web application with multiple platforms.
+                 this development gives us the opportunity to apply our strengths and
+                  bless the world in powerful ways. {% endcomment %}
+              {% for i in contactData %}
+              {{i.vision}}
+               <hr>
+              {% empty %}
+              no data found
+              {% endfor %}
+            </div>
+
+
+			 <div class="col-md-3 reverse_img">
+                <img src="{% static 'webicon/akash.jpeg' %}" width="250px">
+            </div>
+            <div class="col-md-3 reverse_img">
+                <img src="{% static 'webicon/ankit.jpeg' %}" width="250px">
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            {% for i in contactData %}
+            <div class="col-md-3">
+                <img src="{{i.imgpath}}" width="250px"><hr>
+            </div>
+            {% endfor %}
+            
+            {% comment %} <div class="col-md-3">
+                <img src="{% static 'webicon/rishi.jpeg' %}" width="250px"><hr>
+            </div>
+            <div class="col-md-3">
+                <img src="{% static 'webicon/om.jpeg' %}" width="250px"><hr>
+            </div>
+            <div class="col-md-3">
+                <img src="{% static 'webicon/komal.jpeg' %}" width="250px"><hr>
+            </div> {% endcomment %}
+        </div>  
+    </div>
+
+
+
+    <a name="loc1"></a>
+    <div class="container">
+        <div class="head">
+            <p style="text-align: center;">United College Of Engineering And Research</p>
+        </div>
+        <form method="post" action="{% url 'saveenquiry' %}">
+            <select class="select1" name="txt1">
+                <option>Mr</option>
+                <option>Mrs</option>
+                <option>Ms</option>
+            </select>
+            <!-- 11111 -->
+            <div class="form-group">
+                <input  class="select form-control" id="fname" type="text" name="fname"
+                    placeholder="First Name"></input>
+                
+            </div>
+            <!-- 2222 -->
+            <div class="form-group">
+                <input class="select form-control" id="lname" type="text" name="lname" placeholder="Last Name"></input>
+            </div>
+            <!-- 333333 -->
+            <div class="form-group">
+                <input class="select form-control" id="fathername" type="text" name="fathname"
+                    placeholder="Father Name"></input>
+              
+            </div>
+            <!-- 4444444 -->
+            <div class="form-group">
+                <input class="select form-control" id="email" type="text" name="email" placeholder="Email"></input>
+                
+            </div>
+
+            <select class="select2" name="rigion">
+                <option value="91">India (+91)</option>
+
+                <option value="213">Algeria (+213)</option>
+
+                <option value="376">Andorra (+376)</option>
+            </select>
+            <div class="form-group">
+                <input class="select form-control" type="text" id="phone" name="ph" placeholder="Phone number"></input>
+            </div>
+
+            <p align="center"> <input id="submit" type="submit" value="Submit" class="box"></p>
+    </div>
+    </form>
+
+
+
+    <nav aria-label="...">
+        <ul class="pagination">
+            {% if contactData.has_previous %}
+            <li class="page-item ">
+                <a class="page-link" href="/contact/?page=1" tabindex="-1">First</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="/contact/?page={{contactData.previous_page_number}}"  tabindex="-1">Previous</a>
+            </li>
+            {% endif %} 
+
+            {% for n in totalpagelist %}
+            <li class="page-item"><a class="page-link" href="/contact/?page={{n}}">{{n}}</a></li>
+            {% endfor %}
+
+
+            {% if contactData.has_next %}
+
+            <li class="page-item">
+                <a class="page-link" href="/contact/?page={{contactData.next_page_number}}">Next</a>
+            </li>
+               <li class="page-item">
+                <a class="page-link" href="/contact/?page={{lastpage}}">Last</a>
+            </li>
+
+            {% endif %}
+            <div class="content-link">	
+                <div class="space" ><a href="{% url 'home' %}">Home</a></div>
+             </div>
+        </ul>
+    </nav>
+</body>
+</html>

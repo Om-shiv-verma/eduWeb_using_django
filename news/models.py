@@ -1,0 +1,11 @@
+from django.db import models
+from tinymce.models import HTMLField
+from autoslug import AutoSlugField
+
+class News(models.Model):
+    news_title=models.CharField(max_length=200)
+    news_desc=HTMLField()
+    #slug = AutoSlugField(populate_from,unique=True,null=True,default=None)
+    news_image = models.FileField(upload_to="news/",max_length=250, null=True,default=None)
+    news_slug = AutoSlugField(populate_from='news_title',unique=True,null=True,default=None)
+# Create your models here.
